@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="userprofile.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    
+    <title>User Profile</title>
+    <style>
+        #return{
+            cursor: pointer;
+            position: relative;
+            left: 950px;
+            top: 88px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            padding: 7px;
+        }
+        #return:hover{
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="left">
+            <img src="DP.png" alt="user" width="130px" >
+                <h4><%=fixedName[0].USERNAME%></h4>
+             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+             <small>*Always keep your profile updated with the latest information</small>
+
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Account Information</h3>
+                <div class="info_data">
+                     <div class="data">
+                        <h4>Email</h4>
+                            <p><%=fixedName[0].EMAIL%></p>
+                     </div>
+                     <div class="data">
+                       <h4>Phone</h4>
+                            <p><%=fixedName[0].PHONENUMBER%></p>
+                  </div>
+                </div>
+            </div>
+          
+          <div class="projects">
+                <h3>Personal Info</h3>
+                <div class="projects_data">
+                     <div class="data">
+                        <h4>Full Name</h4>
+                        <p><%=newCode1%></p>
+                     </div>
+                     <div class="data">
+                       <h4>Date of Birth</h4>
+                        <p><%=newCode2%></p>
+                    </div>
+                    <div class="data">
+                        <h4>City</h4>
+                        <p><%=newCode3%></p>
+                    </div>
+                </div>
+            <div class="projects">
+                <h3></h3>
+                <div class="projects_data">
+                    <div class="data">
+                       <h4>Secondary Mobile Number</h4>
+                       <p><%=newCode4%></p>
+                    </div>
+                    <div class="data">
+                      <h4>Gender</h4>
+                       <p><%=newCode5%></p>
+                   </div>
+                   <div class="data">
+                       <h4>Country</h4>
+                       <p><%=newCode6%></p>
+                   </div>
+               </div>
+            </div>
+            </div>
+            <div class="projects">
+                <h3>Proffesional Info</h3>
+                <div class="projects_data">
+                     <div class="data">
+                        <h4>Education</h4>
+                        <p><%=newCode7%></p>
+                     </div>
+                     <div class="data">
+                       <h4>Employment</h4>
+                        <p><%=newCode8%></p>
+                    </div>
+                    <div class="data">
+                        <h4>Experiance</h4>
+                        <p><%=newCode9%> years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <h3></h3>
+                <div class="projects_data">
+                     <div class="data">
+                        <h4>Key skills</h4>
+                        <p><%=newCode10%></p>
+                     </div>
+                     <div class="data">
+                       <h4>Projects</h4>
+                        <p><%=newCode11%></p>
+                    </div>
+                    <div class="data">
+                        <h4>Job Intrest</h4>
+                        <p><%=newCode12%></p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="social_media">
+                <ul>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+        </div>
+    </div>
+    
+    <button type="submit" id="mmm" ><img src="profileediticon.png" height="15px" width="auto"></button>
+    <form action="/userhome" method="post" id="boo">
+        <input type="email" value="<%=fixedName[0].EMAIL%>" name="homemail" style="opacity: 0;">
+        <button name="save" value="save" type="submit" id="return">Save & Continue</button>
+    </form>
+
+    <div class="container">
+        <header>Update your profile</header>
+        <div class="close-btn">&times;</div>
+
+        <form class="form" action="updatedprofile" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name <i class="uil uil-user"></i></label>
+                            <input type="text" id="code1" name="code11" value="<%=load1%>" autocomplete="off" placeholder="Enter your name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth <i class="uil uil-calendar-alt"></i></label>
+                            <input type="date" id="code2" name="code12" value="<%=load2%>" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>City <i class="uil uil-map-marker"></i></label>
+                            <input type="text" id="code3" name="code13" value="<%=load3%>" placeholder="Enter your city" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number <i class="uil uil-phone"></i></label>
+                            <input type="tel" id="code4" name="code14" value="<%=load4%>" placeholder="Enter mobile number" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender <i class="uil uil-mars"></i></label>
+                            <select id="code5" name="code15" value="<%=load5%>" required>
+                                <option disabled selected>Select gender</option>
+                                <option selected>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Country <i class="uil uil-globe"></i></label>
+                            <select id="code6" name="code16" value="<%=load6%>" required>
+                                <option disabled selected>Select country</option>
+                                <option selected>India</option>
+                                <option>Outside India</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Proffesional Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Education <i class="uil uil-university"></i></label>
+                            <input type="text" id="code7" name="code17" value="<%=load7%>" autocomplete="off" placeholder="Enter your education details" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Employment <i class="uil uil-briefcase"></i></label>
+                            <input type="text" id="code8" name="code18" value="<%=load8%>" autocomplete="off" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Experiance </label>
+                            <input type="text" id="code9" name="code19" value="<%=load9%>" autocomplete="off">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Key Skills <i class="uil uil-key-skeleton"></i></label>
+                            <input type="text" id="code10" name="code20" value="<%=load10%>" autocomplete="off">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Projects/Achievments <i class="uil uil-trophy"></i></label>
+                            <input type="text" code="11" name="code21" value="<%=load11%>" autocomplete="off" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Job Intrest <i class="uil uil-file-alt"></i></label>
+                            <input type="text" code="12" name="code22" value="<%=load12%>" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Update</span>
+                        <i class="uil uil-check"></i>
+                    </button>
+                    <input type="text" name="cloud" id="edokati" value="<%=fixedName[0].EMAIL%>" style="opacity: 0;">
+                </div> 
+            </div>
+        </form>
+    </div>
+    
+     <script src="userprofile.js"></script>
+</body>
+</html>

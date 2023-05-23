@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicants</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    body{
+	    background: #eceaff;
+    }
+    .shell{
+	margin-left: 60px;
+	margin-right: 200px;
+	width: 600px;
+	height: 75px;
+	background-color: #fff;
+    padding-top: 10px;
+	padding-left: 20px;
+	font-family: 'Poppins', sans-serif;
+    }
+    .viewp{
+        border: none;
+        background-color: green;
+        color: white;
+        font-weight: 700;
+        padding: 8px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <h1>You can check ths user profile by clicking the "View Profile" button</h1>
+    
+    <%for(i=0;i<=Object.keys(vvap).length-1;i++){%>
+        <form class="shell" action="viewonly" method="post">
+            <img src="DP.png" height="55px" width="auto" style="border-radius: 50%;"><span style="position: relative;left: 60px;top: -76px;"><h4><%=Object.values(vvap)[i]%></h4></span>
+            <p style="position: relative;left: 60px;top: -102px;"><small><%=Object.keys(vvap)[i]%></small></p><span style="position: relative;top: -154px;left: 400px;"><button name="viewonly" class="viewp" value="<%=Object.keys(vvap)[i]%>">View Profile</button></span>
+            <hr style="position: relative;top: -140px;">
+        </form>
+    <%}%>
+</body>
+</html>

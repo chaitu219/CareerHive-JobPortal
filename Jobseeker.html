@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+   <meta name="viewport" content="width-device-width,initial-scale-1.0">
+   <title>Home</title>
+   <link rel="stylesheet" href="Jobseeker.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--<link href='https://unpkg.com/css.gg@2.0.0/icons/css/bookmark.css' rel='stylesheet'>-->
+   <script src="Jobseeker.js" defer></script>
+   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+   <div class="header">
+      <nav>
+         <img src="Pics/LLogo.jpeg" height="70px" width="auto" class="logo">
+         <ul>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Companies</a></li>
+            <li><a href="#">Services</a></li>
+            <li>
+               <form class="" action="">
+                  <input type="text" placeholder="Search.." name="search" class="navsearch">
+                  <button type="submit" class="searchicon"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+         </ul>
+
+         <img src="Pics/profile.png"  class="user" onclick="toggleMenu()"> 
+
+         <div class="sub-menu-wrap" id="submenu">
+            <div class="sub-menu">
+               <div class="user-info">
+                  <img src="Pics/DP.png">
+                  <h2>Chaitanya Reddy</h2>
+               </div>
+               <hr>
+
+               <a href="#" class="sub-menu-link">
+                  <img src="Pics/Edit.jpg">
+                  <p>Edit Profile</p>
+                  <span></span>
+               </a>
+               <a href="#" class="sub-menu-link">
+                  <img src="Pics/settings.jpg">
+                  <p>Settings & Privacy</p>
+                  <span></span>
+               </a>
+               <a href="#" class="sub-menu-link">
+                  <img src="Pics/Help.jpg">
+                  <p>Help & Support</p>
+                  <span></span>
+               </a>
+               <a href="HomePage.html" class="sub-menu-link">
+                  <img src="Pics/logout.png">
+                  <p>Logout</p>
+                  <span></span>
+               </a>
+
+            </div>
+         </div>
+      </nav>
+   </div>
+   <!--navbar end-->
+
+   <div class="main-div">
+      <div class="side-div">
+         <img src="Pics/DP.png" class="sidedp">
+      <h4>Chaitanya Reddy P</h4>
+      <a href="userprofile.html"><button id="proflander">Go to Profile</button></a>
+      <div class="performance">
+         <p>Profile performance<p>
+         <small>Jobs Applied: </small><span> 0</span><br>
+         <small>Saved for Later: </small><span> 0</span>
+      </div>
+
+      <a href="#" class="profbar">
+         <img src="Pics/homeicon.png">
+         <p>My Home</p>
+      </a>
+      <a href="#" class="profbar">
+         <img src="Pics/jobicon.png">
+         <p>Jobs</p>
+      </a>
+      <a href="#" class="profbar">
+         <img src="Pics/company.png" >
+         <p>Companies</p>
+      </a>
+
+      </div>
+      <div class="body-div">
+         <button id="topbut">following</button>
+         <button id="topbut">Recommended</button>
+
+         <div class="shell">
+            <h4>Software Developer</h4>
+            <span class="Comp-Name"><small>Amazon </small></span><span class="Comp-rating">4.0 </span><span><img src="Pics/star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span><br>
+            <img src="Pics/calendar.png" height="15px"><span class="deadline"><small>13 March </small></span><span class="Salaryrange"><small>$ 110-140K PA</small></span><img src="Pics/Job.png" height="15px" class="job-icon" ><span class="experiance"> 0-3 years</span>
+            <img src="Pics/location.png" height="15px" class="locicon"><span class="work-city"><small>Hyderabad</small></span><br>
+            <p class="job-description">Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.</p>
+            <span class="skillhead">Skills Required: </span><span class="skill"><small>Python, C, Java</small></span><br>
+            <div class="bottom">
+            <span class="timeago">12 hours ago.</span><span class=><button class="apply">Apply</button> </span>
+            <span><i class="gg-bookmark"></i></span>
+            </div>
+         </div>
+
+         <div class="shell">
+            <h4>Tester</h4>
+            <span class="Comp-Name"><small>TCS </small></span><span class="Comp-rating">4.2 </span><span><img src="Pics/star.png" height="15px"></span><span class="Comp-Reviewcount"> (644 Reviews)</span><br>
+            <img src="Pics/calendar.png" height="15px"><span class="deadline"><small>19 February </small></span><span class="Salaryrange"><small>$ 200-35K PA</small></span><img src="Pics/Job.png" height="15px" class="job-icon" ><span class="experiance"> 2-5 years</span>
+            <img src="Pics/location.png" height="15px" class="locicon"><span class="work-city"><small>Banglore</small></span><br>
+            <p class="job-description">Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.</p>
+            <span>Skills Required: </span><span class="skill"><small>Project Management,Automation,Problem solving</small></span><br>
+            <div class="bottom">
+               <span class="timeago">12 hours ago.</span><span class=><button class="apply">Apply</button> </span>
+               <span><i class="gg-bookmark"></i></span>
+               </div>
+         </div>
+
+         <div class="shell">
+            <h4>Full Stack Web Developer</h4>
+            <span class="Comp-Name"><small>Canarys </small></span><span class="Comp-rating">3.8 </span><span><img src="Pics/star.png" height="15px"></span><span class="Comp-Reviewcount"> (98 Reviews)</span><br>
+            <img src="Pics/calendar.png" height="15px"><span class="deadline"><small>04 March </small></span><span class="Salaryrange"><small>$ 40-50K PA</small></span><img src="Pics/Job.png" height="15px" class="job-icon" ><span class="experiance"> 4-5 years</span>
+            <img src="Pics/location.png" height="15px" class="locicon"><span class="work-city"><small>Work from Home</small></span><br>
+            <p class="job-description">Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.</p>
+            <span>Skills Required: </span><span class="skill"><small>HTML, CSS, JavaScript, .NET, React</small></span><br>
+            <div class="bottom">
+               <span class="timeago">12 hours ago.</span><span class=><button class="apply">Apply</button> </span>
+               <span><i class="gg-bookmark"></i></span>
+               </div>
+         </div>
+
+         <div class="shell">
+            <h4>Data Scientist</h4>
+            <span class="Comp-Name"><small>Amazon </small></span><span class="Comp-rating">4.0 </span><span><img src="Pics/star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span><br>
+            <img src="Pics/calendar.png" height="15px"><span class="deadline"><small>13 March </small></span><span class="Salaryrange"><small>$ 60-80K PA</small></span><img src="Pics/Job.png" height="15px" class="job-icon" ><span class="experiance"> 0-2 years</span>
+            <img src="Pics/location.png" height="15px" class="locicon"><span class="work-city"><small>Delhi</small></span><br>
+            <p class="job-description">Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.</p>
+            <span>Skills Required: </span><span class="skill"><small>Python, Data Science</small></span><br>
+            <div class="bottom">
+               <span class="timeago">12 hours ago.</span><span class=><button class="apply">Apply</button> </span>
+               <span><i class="gg-bookmark"></i></span>
+               </div>
+         </div>
+
+         <div class="shell">
+            <h4>Database Administrator</h4>
+            <span class="Comp-Name"><small>Infinix solutions </small></span><span class="Comp-rating">3.2 </span><span><img src="Pics/star.png" height="15px"></span><span class="Comp-Reviewcount"> (12 Reviews)</span><br>
+            <img src="Pics/calendar.png" height="15px"><span class="deadline"><small>11 March </small></span><span class="Salaryrange"><small>$ 10-15K PA</small></span><img src="Pics/Job.png" height="15px" class="job-icon" ><span class="experiance"> 0-3 years</span>
+            <img src="Pics/location.png" height="15px" class="locicon"><span class="work-city"><small>Hyderabad</small></span><br>
+            <p class="job-description">Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.</p>
+            <span>Skills Required: </span><span class="skill"><small>Python, C, DBMS</small></span><br>
+            <div class="bottom">
+               <span class="timeago">12 hours ago.</span><span class=><button class="apply">Apply</button> </span>
+               <span><i class="gg-bookmark"></i></span>
+               </div>
+         </div>
+
+         <div class="shell">
+            <h4>Software Developer</h4>
+            <span class="Comp-Name"><small>Amazon </small></span><span class="Comp-rating">4.0 </span><span><img src="Pics/star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span><br>
+            <img src="Pics/calendar.png" height="15px"><span class="deadline"><small>13 March </small></span><span class="Salaryrange"><small>$ 110-140K PA</small></span><img src="Pics/Job.png" height="15px" class="job-icon" ><span class="experiance"> 0-3 years</span>
+            <img src="Pics/location.png" height="15px" class="locicon"><span class="work-city"><small>Hyderabad</small></span><br>
+            <p class="job-description">Software Developer designs and builds computer programs that power mobile devices, desktop computers, and even cars. They not only identify user needs but also create new applications for any given market while making improvements based on feedback from users.</p>
+            <span>Skills Required: </span><span class="skill"><small>Python, C, Java</small></span><br>
+            <div class="bottom">
+               <span class="timeago">12 hours ago.</span><span class=><button class="apply">Apply</button> </span>
+               <span><i class="gg-bookmark"></i></span>
+               </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html> 

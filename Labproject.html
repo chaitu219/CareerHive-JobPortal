@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+	        background: #eceaff;
+            font-family: 'Poppins', sans-serif;
+        }
+        .phase1{
+            position: relative;
+            top: 10px;
+            left: 100px;
+            width: 300px;
+            height: 550px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+        }
+        .phase1 input{
+            width: 200px;
+            height: 30px;
+            /* border-radius: 20px; */
+            /* border: none;
+            outline: none;
+            border-bottom: 1.5px solid black; */
+        }
+        .phase2{
+            position: relative;
+            top: -570px;
+            left: 500px;
+            width: 300px;
+            height: 550px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+        }
+        .phase2 input{
+            width: 200px;
+            height: 30px;
+            /* border-radius: 20px; */
+            /* border: none;
+            outline: none;
+            border-bottom: 1.5px solid black; */
+        }
+        .phase3{
+            position: relative;
+            top: -1190px;
+            left: 900px;
+            width: 300px;
+            height: 550px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+        }
+        .phase3 input{
+            width: 200px;
+            height: 30px;
+            /* border-radius: 20px; */
+            /* border: none;
+            outline: none;
+            border-bottom: 1.5px solid black; */
+        }
+        .phase1.remove{
+            opacity: 0;
+        }
+        .phase2{
+            opacity: 0;
+        }
+        .phase2.active{
+            opacity: 1;
+        }
+        .phase3{
+            opacity: 0;
+        }
+        .phase3.active{
+            opacity: 1;
+        }
+        .nextphase1{
+            opacity: 1;
+            position: relative;
+            left: 400px;
+            top: 650px;
+            font-size: 15px;
+        font-weight: 600;
+        color: white;
+        background: green;
+        border: 2px solid green;
+        padding: 8px;
+        outline: none;
+        cursor: pointer;
+         border-radius: 5px;
+        }
+        .nextphase1.remove{
+            opacity: 0;
+        }
+        .nextphase2{
+            opacity: 0;
+            position: relative;
+            left: 790px;
+            top: 650px;
+            font-weight: 600;
+        color: white;
+        background: green;
+        border: 2px solid green;
+        padding: 8px;
+        outline: none;
+        cursor: pointer;
+         border-radius: 5px;
+
+        }
+        .nextphase2.active{
+            opacity: 1;
+        }
+        #submit{
+            margin-top: 15px;
+            font-size: 15px;
+        font-weight: 600;
+        color: white;
+        background: green;
+        border: 2px solid green;
+        padding: 8px;
+        outline: none;
+        cursor: pointer;
+         border-radius: 15px;
+            }
+        
+    </style>
+</head>
+<body>
+    <button class="nextphase1">Next</button>
+    <button class="nextphase2">Next</button>
+
+    <form action="display" method="post">
+        <div class="phase1">
+            <h3>Bascic Details</h3>
+            <p>First Name</p>
+            <input type="text" id="Firstname" name="Firstname">
+            <p>Last Name</p>
+            <input type="text" id="Lastname" name="Lastname">
+            <p>Age</p>
+            <input type="number" id="Age" name="Age">
+            <p>Gender</p>
+            <input type="text" id="Gender" name="Gender">
+            <p>Height(in cm)</p>
+            <input type="number" id="Height" name="Height">
+            <p>Weight(in kg)</p>
+            <input type="number" id="Weight" name="Weight"><br>
+            
+        </div>
+        <div class="phase2">
+            <h3>Education Details</h3>
+            <select>
+                <option>ssc</option>
+                <option>pg</option>
+                <opti0n>ug</opti0n>
+            </select>
+            <p>School</p>
+            <input type="text" id="School" name="School">
+            <p>Aggregate</p>
+            <input type="text" id="Aggr" name="Aggr">
+            <p>College</p>
+            <input type="text" id="College" name="College">
+            <p>Aggregate</p>
+            <input type="text" id="Aggrc" name="Aggrc">
+        </div>
+        <div class="phase3">
+            <h3>Communication Details</h3>
+            <p>Email</p>
+            <input type="email" id="Email" name="Email">
+            <p>Contact Number</p>
+            <input type="tel" id="Number" name="Number">
+            <p>Address</p>
+            <input type="text" id="Address" name="Address"><br> 
+            <button type="submit" id="submit">Submit</button> 
+        </div>
+    </form>
+</body>
+
+
+
+<script>
+    var firstname = document.getElementById("Firstname")
+    var lastname = document.getElementById('Lastname')
+    var age = document.getElementById('Age')
+    var height = document.getElementById('Height')
+    var weight = document.getElementById('Weight')
+
+    
+    document.querySelector(".nextphase1").addEventListener("click",function(){
+    document.querySelector(".phase2").classList.add("active");
+    document.querySelector(".phase1").classList.add("remove");
+    document.querySelector(".nextphase1").classList.add("remove");
+    document.querySelector(".nextphase2").classList.add("active");
+    
+    });
+    document.querySelector(".nextphase2").addEventListener("click",function(){
+    document.querySelector(".phase2").classList.remove("active");
+    document.querySelector(".phase3").classList.add("active");
+    document.querySelector(".nextphase2").classList.remove("active");
+    
+    });
+
+</script>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="homestyle.css">
+    <script src="Hscript.js" defer></script>
+    <title>CareerHive</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--swiper css-->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="containern">
+       <div class="header-main">
+          <div class="logo" id="logo">
+             <a href="#"><img src="LLogo.jpeg" height="75px" width="auto"></a>
+          </div>
+          <div class="open-nav-menu">
+             <span></span>
+          </div>
+          <div class="menu-overlay">
+          </div>
+          <!-- navigation menu start -->
+          <nav class="nav-menu">
+            <div class="close-nav-menu">
+               <img src="img/close.svg" alt="close">
+            </div>
+            <ul class="menu">
+               <li class="menu-item menu-item-has-children" id="jobs">
+                  <a href="jobsection.ejs" data-toggle="sub-menu">Jobs <i class="plus"></i></a>
+                  <ul class="sub-menu">
+                      <li class="menu-item"><a href="#">Fullstack Web developer</a></li>
+                      <li class="menu-item"><a href="#">Software Developer</a></li>
+                      <li class="menu-item"><a href="#">Tester</a></li>
+                      <li class="menu-item"><a href="#">Frontend Developer</a></li>
+                  </ul>
+               </li>
+               <li class="menu-item menu-item-has-children" id="companies">
+                <a href="companysection.ejs" data-toggle="sub-menu">Companies <i class="plus"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="#">Amazon</a></li>
+                        <li class="menu-item"><a href="#">Google</a></li>
+                        <li class="menu-item"><a href="#">Jio</a></li>
+                        <li class="menu-item"><a href="#">Avertium</a></li>
+                    </ul>
+                </li>
+               <li class="menu-item" id="services">
+                  <a href="#">Services </a>
+               </li>
+               <li class="menu-item">
+                <button id="show-login">Login</button>
+               </li>
+               <li class="menu-item">
+                <a href="Register"><button id="show-register">Register</button></a>
+               </li>
+               <li class="menu-item" id="employers">
+                  <a href="employer.html">|  For Emploers</a>
+               </li>
+            </ul>
+          </nav>
+       </div>
+    </div>
+</header>
+
+ <br><br><br><br>
+<img src="Canva2.jpg" width="100%">
+    <div class="header1">
+        <form action="/jobsdisplay" method="post">
+            <div class="form-box">
+                <input type="text" class="search-field jobs" name="sfcomp" placeholder="Enter designations/ companies">
+                <input type="text" class="search-field experiance" name="sfexp" placeholder="Select experiance">
+                <button class="search-btn" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+    
+    <!--Flexbox-->
+    <br>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box">
+                 <p>MNC ></p>
+                 <a href="#" class="btn1">Apply</a>
+            </div>
+            <div class="box">
+                <p>Data Science ></p>
+                <a href="#" class="btn1">Apply</a>
+           </div>
+           <div class="box">
+                <p>HR ></p>
+                <a href="#" class="btn1">Apply</a>
+            </div>
+            <div class="box">
+                <p>Banking ></p>
+                <a href="#" class="btn1">Apply</a>
+           </div>
+           <div class="box">
+                <p>Analytics ></p>
+                <a href="#" class="btn1">Apply</a>
+            </div>
+            <div class="box">
+                <p>Software ></p>
+                <a href="#" class="btn1">Apply</a>
+           </div>
+           <div class="box">
+                <p>WFH ></p>
+                <a href="#" class="btn1">Apply</a>
+            </div>
+            <div class="box">
+                <a href="#" class="btn1">view more ></a>
+            </div>
+        </div>
+    </div>
+    <!--login popup-->
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <form class="form" action="/userhome" method="post">
+            <h2>Login</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Loginmail" value="pcreddy1120@gmail.com"  placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="Loginpassword" value="chaitu123"  placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <button name="save" value="submit" type="submit">Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="Register.html">Register Now</a>
+            </div>
+        </form>
+    </div>
+    <!--login popup-->
+    <h1 id="hh1">Top Companies hiring now</h1>
+    <!--card slider-->
+    <div class="cardslider">
+        <div class="slide-container2 swiper">
+            <div class="slide-content2">
+                <div class="card-wrapper2 swiper-wrapper">
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="amazon.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Amazon</h2>
+                            <p class="description2">Amazon Web Services(AWS) is a cloud computing platform that provides a wide range of services, including computing, machine learning etc.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="avertium.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Avertium</h2>
+                            <p class="description2">Avertium is a leading provider of cybersecurity services that helps organisations protect againest cyber threats and minimize risk.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="deloitte.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Deloitte</h2>
+                            <p class="description2">Deloitte is a global proffesional services firm that provides consulting, auditing,tax, advisory services to clients across industries.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="google.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Google</h2>
+                            <p class="description2">Google is a MNC company that specualizes in internet services and products,also one of the most widely recognised brands in the world.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="infosys.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Infosys</h2>
+                            <p class="description2">Infosys is a global leader in consulting, technology and outstanding solutions,cloud computing,cybersecurity and many more.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="meta.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Meta</h2>
+                            <p class="description2">Meta(formerly Facebook) is a social media and technology company that connects people and communities around the world through several apps.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="overit.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Overit</h2>
+                            <p class="description2">Overit is a companny with team of experts that helps businesses transform and a rapidly-changing digital world by providing end to end services.</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="tcs.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">TCS</h2>
+                            <p class="description2">TCS is a global IT services,consulting and business solutions organization,provides end to end solutions across industries</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                    <div class="card2 swiper-slide">
+                        <div class="image-content2">
+                            <span class="overlay2"></span>
+
+                            <div class="card-image2">
+                                <img src="wipro.jpg" alt="" class="card-img2">
+                            </div>
+                        </div>
+
+                        <div class="card-content2">
+                            <h2 class="name2">Wipro</h2>
+                            <p class="description2">Wipro is a global information technology, consulting, and business process service company that harness power of digital technology</p>
+
+                            <button class="button2">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--card slider-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>CareerHive</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Employer home</a></li>
+                        <li><a href="#">Site map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Summons/Notices</a></li>
+                        <li><a href="#">Report issue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Policy</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Fraud Alert</a></li>
+                        <li><a href="#">Trust and Safety</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtu.be/xvFZjo5PgG0"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="footer-bottom">
+    &copy; careerhive.com | Designed by Chaitanya Reddy
+</div>
+</body>
+
+<!--swiper js-->
+<script src="swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</html>

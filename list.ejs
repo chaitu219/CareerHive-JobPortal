@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+   <meta name="viewport" content="width-device-width,initial-scale-1.0">
+   <title>UserHome</title>
+   <link rel="stylesheet" href="Jobseeker.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--<link href='https://unpkg.com/css.gg@2.0.0/icons/css/bookmark.css' rel='stylesheet'>-->
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <script src="Jobseeker.js" defer></script>
+   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+   <div class="header">
+      <nav>
+         <img src="LLogo.jpeg" height="70px" width="auto" class="logo">
+         <ul>
+            <li><a href="jobsection.ejs">Jobs</a></li>
+            <li><a href="companysection.ejs">Companies</a></li>
+            <li><a href="#">Services</a></li>
+            <li>
+               <div class="hs">
+               <form action="/userhome" method="post">
+                  <div class="wrapper">
+                     <div class="search-container">
+                       <input type="text" class="i1" name="cri1" autocomplete="off" placeholder="Job Name">|
+                       <input type="text" class="i2" name="cri2" autocomplete="off" placeholder="Company Name">|
+                       <input type="text" class="i3" name="cri3" autocomplete="off" placeholder="Salary(in K$)">
+                       <input type="text" name="recmail" value="<%=secretMail%>" style="opacity: 0;height: 5pxpx;width: 2px;">
+                       <button type="submit" name="save" value="searchjobs" class="button">Search</button>
+                     </div>
+                   </div>
+                </form>
+                </div>
+            </li>
+         </ul>
+
+         <img src="profile.png"  class="user" onclick="toggleMenu()"> 
+
+         <div class="sub-menu-wrap" id="submenu">
+            <div class="sub-menu">
+               <div class="user-info">
+                  <img src="DP.png">
+                  <h2><%=ussrname%></h2>
+               </div>
+               <hr>
+
+               <a href="#" class="sub-menu-link">
+                  <img src="Edit.jpg">
+                  <p>Edit Profile</p>
+                  <span></span>
+               </a>
+               <a href="#" class="sub-menu-link">
+                  <img src="settings.jpg">
+                  <p>Settings & Privacy</p>
+                  <span></span>
+               </a>
+               <a href="#" class="sub-menu-link">
+                  <img src="Help.jpg">
+                  <p>Help & Support</p>
+                  <span></span>
+               </a>
+               <a href="/" class="sub-menu-link">
+                  <img src="logout.png">
+                  <p>Logout</p>
+                  <span></span>
+               </a>
+
+            </div>
+         </div>
+      </nav>
+   </div>
+   <!--navbar end-->
+
+   <div class="main-div">
+      <div class="side-div">
+         <img src="DP.png" class="sidedp">
+         <h4><%=ussrname%></h4>
+
+         <form action="/userprofile" method="post">
+            <input type="text" id="hiddenMail" name="HiddenMail" value="<%=secretMail%>" style="opacity: 0;height: 5px;width: 150px;">
+            <button type="submit" id="proflander">Go To Profile</button>
+         </form>
+         <div class="performance">
+            <p>Profile performance<p>
+            <form action="/appliedjobs" method="post"><button name="viewappl" value="<%=secretMail%>" style="border: none;background: none;cursor: pointer;"><small>Jobs Applied: </small></button><span> <%=Object.keys(NJ).length%></span></form>
+            <form><button name="viewsaved" value="<%=secretMail%>" style="border: none;background: none;cursor: pointer;"><small>Saved for Later: </small></button><span> <%=Object.keys(NS).length%></span></form>
+         </div>
+
+         <a href="#" class="profbar">
+            <img src="homeicon.png">
+            <p>My Home</p>
+         </a>
+         <a href="jobsection.ejs" class="profbar">
+            <img src="jobicon.png">
+            <p>Jobs</p>
+         </a>
+         <a href="companysection.ejs" class="profbar">
+            <img src="company.png" >
+            <p>Companies</p>
+         </a>
+
+      </div>
+      <div class="body-div">
+         <button id="topbut">following</button>
+         <form action="/userhome" method="post">
+            <input type="text" name="recmail" value="<%=secretMail%>" style="opacity: 0;height: 0px;width: opx;">
+            <button type="submit" id="topbut" name="save" value="unq" style="position: relative;top: -36px;left: -5px;">Recommended</button>
+         </form>
+
+         <div><h1><%=message%></h1></div>
+         <%for(i=(simp.length-1);i>=0;i--){%>
+
+            <div class="shell">
+                <h4><%=simp[i].JOBNAME%></h4>
+                <div class="line1" style="display: flex;"><span class="Comp-Name"><form action="/companyprofile" method="post"><button name="cpro" style="border: none;background-color: white;cursor: pointer;" value="<%=simp[i].JOBCOMPANY%>"><%=simp[i].JOBCOMPANY%> </button></form> </span><span class="Comp-rating">4.0 </span><span><img src="star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span></div>
+                <img src="calendar.png" height="15px"><span class="deadline"><small><%=simp[i].JOBDATE%> </small></span><span class="Salaryrange"><small>$ <%=simp[i].JOBSALARY%>K PA</small></span><img src="Job.png" height="15px" class="job-icon" ><span class="experiance"> <%=simp[i].JOBEXPERIANCE%> years</span>
+                <img src="location.png" height="15px" class="locicon"><span class="work-city"><small><%=simp[i].JOBLOCATION%></small></span><br>
+                <p class="job-description"><%=simp[i].JOBDESCRIPTION%></p>
+                <span class="skillhead">Skills Required: </span><span class="skill"><small> <%=simp[i].JOBSKILLS%></small></span><br>
+                <form class="bottom" style="padding-top: 5px;" action="/userhome" method="post">
+                <span class="timeago">12 hours ago.</span><span><input type="text" name="applymail" style="opacity: 0;" value="<%=secretMail%>"> </span><span><input type="text" name="applyid" style="opacity: 0;" value="<%=simp[i]._id%>"> </span><span class=><button id="apply" class="apply" type="submit" name="save" value="filter">Apply</button> </span>
+                <span><i class="gg-bookmark"></i></span>
+                </form>
+             </div>
+        
+        <%}%>
+
+
+      </div>
+   </div>
+</body>
+</html> 

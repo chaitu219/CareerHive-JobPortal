@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    body{
+	background: #eceaff;
+	}
+    .shell{
+	margin-top: 20px;
+	margin-left: 60px;
+	margin-right: 200px;
+	width: 800px;
+	min-height: 220px;
+	background-color: #fff;
+	border-radius: 10px;
+	float: right;
+	padding-left: 30px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+	}
+.Comp-rating{
+	padding-top: 0;
+	padding-left: 9px;
+	padding-bottom: 5px;
+}
+.Comp-Reviewcount{
+	color: #265DF2;
+}
+.Salaryrange,
+.locicon{
+	padding-left: 9px;
+}
+.job-icon{
+	padding-left: 9px;
+}
+
+
+.timeago{
+	background: rgb(131, 237, 147);
+	font-size: 12px;
+	font-weight: 500;
+	padding: 4px;
+}
+    </style>
+</head>
+<body>
+    <%for(i=(wmp.length-1);i>=0;i--){%>
+
+        <div class="shell">
+            <h4><%=wmp[i].JOBNAME%></h4>
+            <span class="Comp-Name"><small><%=wmp[i].JOBCOMPANY%> </small></span><span class="Comp-rating">4.0 </span><span><img src="star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span><br>
+            <img src="calendar.png" height="15px"><span class="deadline"><small>13 March </small></span><span class="Salaryrange"><small>$ <%=wmp[i].JOBSALARY%>K PA</small></span><img src="Job.png" height="15px" class="job-icon" ><span class="experiance"> <%=wmp[i].JOBEXPERIANCE%> years</span>
+            <img src="location.png" height="15px" class="locicon"><span class="work-city"><small><%=wmp[i].JOBLOCATION%></small></span><br>
+            <p class="job-description"><%=wmp[i].JOBDESCRIPTION%></p>
+            <span class="skillhead">Skills Required: </span><span class="skill"><small> <%=wmp[i].JOBSKILLS%></small></span><br>
+            <div class="bottom">
+            <span class="timeago">12 hours ago.</span>
+            <span><i class="gg-bookmark"></i></span>
+            </div>
+         </div>
+    
+    <%}%>
+</body>
+</html>

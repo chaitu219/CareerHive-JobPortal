@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>Confirm your details</header>
+        
+
+        <form class="form" action="confirmed" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Basic Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name <i class="uil uil-user"></i></label>
+                            <input type="text" id="code1" name="code11" value="<%=vvv[0].FIRSTNAME%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Last Name <i class="uil uil-calendar-alt"></i></label>
+                            <input type="text" id="code2" name="code12" value="<%=vvv[0].LASTNAME%>" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Age <i class="uil uil-map-marker"></i></label>
+                            <input type="num" id="code3" name="code13" value="<%=vvv[0].AGE%>"  required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender <i class="uil uil-phone"></i></label>
+                            <input type="text" id="code4" name="code14" value="<%=vvv[0].GENDER%>"  required>
+                        </div>
+                        <div class="input-field">
+                            <label>Height <i class="uil uil-phone"></i></label>
+                            <input type="number" id="code5" name="code15" value="<%=vvv[0].HEIGHT%>"  required>
+                        </div>
+                        <div class="input-field">
+                            <label>weight <i class="uil uil-phone"></i></label>
+                            <input type="number" id="code6" name="code16" value="<%=vvv[0].WEIGHT%>"  required>
+                        </div>
+
+                        
+
+                        
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">EDUCATION Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>School <i class="uil uil-university"></i></label>
+                            <input type="text" id="code7" name="code17" value="<%=vvv[0].SCHOOL%>" placeholder="Enter your education details" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Aggregate in school <i class="uil uil-briefcase"></i></label>
+                            <input type="text" id="code8" name="code18" value="<%=vvv[0].AGG1%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>College </label>
+                            <input type="text" id="code9" name="code19" value="<%=vvv[0].COLLEGE%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Aggregate in college <i class="uil uil-key-skeleton"></i></label>
+                            <input type="text" id="code10" name="code20" value="<%=vvv[0].AGG2%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email <i class="uil uil-key-skeleton"></i></label>
+                            <input type="email" id="code11" name="code21" value="<%=vvv[0].EMAIL%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Contact number <i class="uil uil-key-skeleton"></i></label>
+                            <input type="text" id="code12" name="code22" value="<%=vvv[0].CONTACTNUMBER%>" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Address <i class="uil uil-key-skeleton"></i></label>
+                            <input type="text" id="code13" name="code23" value="<%=vvv[0].ADDRESS%>" >
+                        </div>
+
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">Confirm</span>
+                        <i class="uil uil-check"></i>
+                    </button>
+                    <input type="text" name="cloud" id="edokati" value="" style="opacity: 0;">
+                </div> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>

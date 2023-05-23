@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Jobs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    .shell{
+	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-right: 200px;
+	width: 800px;
+	min-height: 220px;
+	background-color: #fff;
+    border: 2px solid black;
+	border-radius: 10px;
+	padding-left: 30px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+.Comp-rating{
+	padding-top: 0;
+	padding-left: 9px;
+	padding-bottom: 5px;
+}
+.Comp-Reviewcount{
+	color: #265DF2;
+}
+.Salaryrange,
+.locicon{
+	padding-left: 9px;
+}
+.job-icon{
+	padding-left: 9px;
+}
+.timeago{
+	background: rgb(131, 237, 147);
+	font-size: 12px;
+	font-weight: 500;
+	padding: 4px;
+}
+.apply{
+	font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background: rgb(3, 99, 3);
+    border: 2px solid rgb(3, 99, 3);
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+	margin-left: 250px; 
+}
+.savelater{
+	height: 25px;
+    width: 15px;
+    display: inline-flex;
+    justify-content: center;
+    column-gap: 5px;
+    color: #3a3d52;
+    background-color: #fff;
+    cursor: pointer;
+    align-items: center;
+    border: none;
+    font-size: 20px;
+	margin-left: 9px;
+}
+    </style>
+</head>
+<body>
+        <%for(i=(simp.length-1);i>=0;i--){%>
+
+            <% var date1 = new Date()%>
+         <% var date2 = new Date (simp[i].JOBDATE)%>
+         <%var total_seconds = Math.abs(date2 - date1) / 1000 %>
+         <%var secs_difference = Math.floor(total_seconds)%>
+         <%var mins_difference = Math.floor(total_seconds/60)%>
+         <%var hours_difference = Math.floor(total_seconds/(60 * 60))%>
+         <%var days_difference = Math.floor (total_seconds / (60 * 60 * 24))%>
+         <%var weeks_difference = Math.floor(total_seconds / (60 * 60 * 24 * 7))%>
+         <%var months_difference = Math.floor(total_seconds / (60 * 60 * 24 * 30))%>
+         
+         <%if(total_seconds < 60){numeric=secs_difference,metric="seconds"}%>
+
+         <%if(total_seconds >= 60 && total_seconds < 120){numeric=mins_difference,metric="minute"}%>
+         <%if(total_seconds >= 120 && total_seconds < 3600){numeric=mins_difference,metric="minutes"}%>
+
+         <%if(total_seconds >= 3600 && total_seconds < 7200){numeric=hours_difference,metric="hour"}%>
+         <%if(total_seconds >= 7200 && total_seconds < 86400){numeric=hours_difference,metric="hours"}%>
+
+
+         <%if(total_seconds >= 86400 && total_seconds < 172800){numeric=days_difference,metric="day"}%>
+         <%if(total_seconds >= 172800 && total_seconds < 604800){numeric=days_difference,metric="days"}%>
+
+         <%if(total_seconds >= 604800 && total_seconds < 1209600){numeric=weeks_difference,metric="week"}%>
+         <%if(total_seconds >= 1209600){numeric=weeks_difference,metric="weeks"}%>
+
+         <%var checker = simp[i]._id%>
+         <%var value = "Apply"%>
+         <%for(j=0;j<=(Object.keys(NJ).length-1);j++){%>
+            <%if(checker==Object.keys(NJ)[j]){%>
+            <%value="Applied"%>
+            <%break%>
+         <%}%>
+         <%}%>
+
+         <%var checker = simp[i]._id%>
+         <%valu="far fa-bookmark"%>
+         <%for(j=0;j<=(Object.keys(NS).length-1);j++){%>
+            <%if(checker==Object.keys(NS)[j]){%>
+            <%valu="fa fa-bookmark"%>
+            <%break%>
+         <%}%>
+         <%}%>
+
+
+           <div class="shell">
+               <h4><%=simp[i].JOBNAME%></h4>
+               <div class="line1" style="display: flex;"><span class="Comp-Name"><form action="/companyprofile" method="post"><button name="cpro" style="border: none;background-color: white;cursor: pointer;" value="<%=simp[i].JOBCOMPANY%>"><%=simp[i].JOBCOMPANY%> </button><input type="text" name="promail" value="<%=secretMail%>" style="width: 5px;opacity: 0;"> </form> </span><span class="Comp-rating">4.0 </span><span><img src="star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span></div>
+               <img src="calendar.png" height="15px"><span class="deadline"><small><%=simp[i].JOBDATE.slice(4,simp[i].JOBDATE.length-39)%> </small></span><span class="Salaryrange"><small>$ <%=simp[i].JOBSALARY%>K PA</small></span><img src="Job.png" height="15px" class="job-icon" ><span class="experiance"> <%=simp[i].JOBEXPERIANCE%> years</span>
+               <img src="location.png" height="15px" class="locicon"><span class="work-city"><small><%=simp[i].JOBLOCATION%></small></span><br>
+               <p class="job-description"><%=simp[i].JOBDESCRIPTION%></p>
+               <span class="skillhead">Skills Required: </span><span class="skill"><small> <%=simp[i].JOBSKILLS%></small></span><br>
+               <form class="bottom" style="padding-top: 5px;" action="/userhome" method="post">
+               <span class="timeago"><%=numeric%> <%=metric%> ago.</span><span><input type="text" name="applymail" style="opacity: 0;" value="<%=secretMail%>"> </span><span><input type="text" name="applyid" style="opacity: 0;" value="<%=simp[i]._id%>"> </span><span class=><button id="apply" class="apply" type="submit" name="save" value="filter"><%=value%></button> </span>
+               <span><button class="savelater" name="save" value="saveit"><i class="<%=valu%>"></i></button></span>
+              </form>
+            </div>
+       <%}%>      
+</body>
+</html>

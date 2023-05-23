@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Homepage</title>
+    <link rel="stylesheet" href="emphome.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        #navic{
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="side-nav">
+        <div class="user">
+            <img src="infosys.jpg" class="user-img">
+            <div>
+                <p><b><%=displayname%></b> <i class="uil uil-check-circle"></i></p>
+                <p><%=secretcmail%></p>
+            </div>
+            <img src="star.png" class="star-img" height="20px" width="auto">
+        </div>
+        <ul>
+            <li><i class="uil uil-estate"></i><p>Home</p></li>
+            <li><i class="uil uil-user-square"></i><p>Profile</p></li>
+            <li><i class="uil uil-headphones"></i><p>About us</p></li>
+            <!-- <li><i class="uil uil-bag"></i><p>Jobs</p></li> -->
+            <form class="spring" action="/joblander" method="post">
+                <input type="text" name="hiddenMail" value=<%=secretcmail%> style="opacity: 0;">
+                <li><i class="uil uil-bag"></i><button type="submit" name="dir" value="forward" id="navic"><p> Jobs</p></button></li>
+            </form>
+            <li><i class="uil uil-users-alt"></i><p>Applicants</p></li>
+            <li><i class="uil uil-cloud-question"></i><p>Help</p></li>
+            <li><i class="uil uil-setting"></i><p>Settings</p></li>
+
+        </ul>
+        <ul>
+            <li><i class="uil uil-sign-out-alt"></i><a style="text-decoration: none;" href="/"><p>Logout</p></a> </li>
+        </ul>
+    </div>  
+</div>  
+</body>
+</html>

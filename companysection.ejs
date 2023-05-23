@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Companies</title>
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+}
+.main{
+
+ margin: 2%;
+}
+
+.card{
+     width: 20%;
+     display: inline-block;
+     /* box-shadow: 2px 2px 20px black; */
+     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+     border-radius: 5px; 
+     margin: 2%;
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  
+
+ 
+ }
+
+.title{
+ 
+  text-align: center;
+  padding: 10px;
+  
+ }
+
+h1{
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+ 
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:10px;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+</style>
+<body>
+
+<div class="main">
+
+ <!--cards -->
+ <%for(i=(vmp.length-1);i>=0;i--){%>
+<div class="card">
+
+<div class="image">
+   <img src="compb.jpg">
+</div>
+<div class="title">
+  <h1><%=vmp[i].EMPCOMPANYNAME%></h1>
+</div>
+<div class="des">
+  <p><span class="Comp-rating">4.0 </span><span><img src="star.png" height="15px"></span><span class="Comp-Reviewcount"> (129 Reviews)</span></p>
+<form action="/companyprofile" method="post"><button name="cpro" value="<%=vmp[i].EMPCOMPANYNAME%>">View Jobs...</button></form>
+</div>
+</div>
+<%}%>
+<!--cards -->
+</div>
+</body>
+</html>

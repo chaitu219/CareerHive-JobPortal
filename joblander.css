@@ -1,0 +1,56 @@
+.newjob{
+	border: 2px solid black;
+	margin: 10px;
+	padding: 20px;
+	margin-left: 200px;
+	margin-right: 200px;
+	text-align: center;
+}
+
+.newjob input{
+	width: 400px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: rgb(238, 238, 238);
+}
+
+
+
+.shell{
+	margin-top: 20px;
+	margin-left: 60px;
+	margin-right: 200px;
+	width: 800px;
+	min-height: 240px;
+	background-color: #fff;
+	border-radius: 10px;
+	float: right;
+	padding-left: 30px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.Comp-rating{
+	padding-top: 0;
+	padding-left: 9px;
+	padding-bottom: 5px;
+}
+.Comp-Reviewcount{
+	color: #265DF2;
+}
+.Salaryrange,
+.locicon{
+	padding-left: 9px;
+}
+.job-icon{
+	padding-left: 9px;
+}
+
+.timeago{
+	background: rgb(131, 237, 147);
+	font-size: 12px;
+	font-weight: 500;
+	padding: 4px;
+}
