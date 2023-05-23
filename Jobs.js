@@ -722,8 +722,8 @@ app.post("/employerhomepage",async function(req,res){
                     var dire=req.body.dir;
                     if(dire=="forward"){
                         var lddddmail=req.body.hiddenMail;
-                    var sss = await jobdata.find({JOBMAIL: lddddmail})
-                    var lddddname = sss[0].JOBCOMPANY
+                    var sss = await jobdata.find({EMPEMAIL: lddddmail})
+                    var lddddname = sss[0].EMPCOMPANYNAME
 
                     var zxc =await jobdata.find({JOBCOMPANY: lddddname})
                     // var day = today.toLocaleDateString("en-US",options);
